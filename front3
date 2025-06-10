@@ -1,0 +1,16 @@
+WarmUp-1 : front3
+
+Given a string, we'll say that the front is the first 3 chars of the string. 
+If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+public String front3(String str) {
+//creating new string variable
+  String str2 = str;
+//checking if the length of the string is greater than 3
+        if (str2.length() > 3) {
+        if so, we set str2 to the substring of str from index 0 to 3
+            str2 = str.substring(0, 3);
+        }
+      //after that, we then return str2 3 times concatenated together 
+        return str2 + str2 + str2;
+    }
