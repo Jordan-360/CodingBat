@@ -1,0 +1,13 @@
+WarmUp-1 : nearHundred
+
+
+Given an int n, return true if it is within 10 of 100 or 200.
+Note: Math.abs(num) computes the absolute value of a number.
+
+public boolean nearHundred(int n) {
+//setting target numbers to 100 & 200
+  int targetNumber = 100;
+        int targetNumber2 = 200;
+        //returning if the absolute number of n - targetNumber is less than or equal to 10 || if the absolute number of n - targetNumber2 is less than or equal to 10
+        return (Math.abs(n - targetNumber) <= 10) || (Math.abs(n - targetNumber2)) <= 10;
+}
