@@ -1,0 +1,17 @@
+WarmUp 1 : diff21
+
+Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+public int diff21(int n) {
+// setting our target variable to 21
+  int targetNumber = 21;
+        if(n >= 21) {
+      //checking if m is greater than or equal to 21
+      //if so, we use the Math class to calculate the absloute number of n - targetNumber * 2
+            return Math.abs(n - targetNumber) * 2;
+        } else {
+      //if not, we use the Math class to calculate the absolute number of n - targetNumber
+            return Math.abs(n - targetNumber);
+        }
+    }
+
