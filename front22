@@ -1,0 +1,17 @@
+WarmUp-1 : front22
+
+Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". 
+If the string length is less than 2, use whatever chars are there.
+
+public String front22(String str) {
+//checking if the length of str is less than 3
+  if(str.length() < 3) {
+  //if so, we return str 3 times concatenated together
+            return str + str + str;
+        } else {
+        //if not, we create a new string variable and set it to the substring of str from the index of 0 to 2 (non-inclusive) 
+            String front = str.substring(0,2);
+            //we then return the created string varaible + str + the created string variable again
+            return front + str + front;
+        }
+}
