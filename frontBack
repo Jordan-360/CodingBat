@@ -1,0 +1,15 @@
+WarmUp-1 : frontBack
+
+Given a string, return a new string where the first and last chars have been exchanged.
+
+public String frontBack(String str) {
+//create a new string variable
+   String str2 = str;
+   //checking if the length of the string is greater than 1
+        if (str.length() > 1) {
+        //if so, we set str2 to the character at the length of str - 1 + the substring of str from the index 1 to the length of the string - 1 + the character at index 0
+            str2 = str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
+        }
+        //returning the created string variable 
+        return str2;
+    }
