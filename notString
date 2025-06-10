@@ -1,0 +1,27 @@
+WarmUp-1 : notString
+
+Given a string, return a new string where "not " has been added to the front. 
+However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+public String notString(String str) {
+//creating a new string variable
+  String str2 = "";
+//setting our target string variable to "not"
+        String targetString = "not ";
+        if (str.length() < 3) {
+          //if the length of the string is less than 3, we set str2 to str then return our target string + str2
+            str2 = str;
+            return targetString + str2;
+        }
+      //checking if str stars with "not"
+        if (str.startsWith("not")) {
+        //if so, we set str2 to str then return str2
+            str2 = str;
+            return str2;
+        } else {
+            //if not, we set str2 to str then return the target string + str2
+            str2 = str;
+            return targetString + str2;
+        }
+}
+
