@@ -1,0 +1,9 @@
+WarmUp-1 : or35
+
+Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator.
+
+public boolean or35(int n) {
+//by using the mod "%" operator, we can check to see if n is a multiple of 3 OR if n is a multiple of 5
+//if we want to check if n is a multiple of 3, we take n mod 3 (n % 3) and check to see if this results in 0, if so, it is a multiple of 3, if not, then it is not a multiple of 3
+  return (n % 3 == 0 || n % 5 == 0);
+}
