@@ -1,0 +1,8 @@
+Warm-Up 1 : startHi
+
+Given a string, return true if the string starts with "hi" and false otherwise.
+
+public boolean startHi(String str) {
+//Checking and returning if the string starts with the word "hi"
+  return str.startsWith("hi");
+}
