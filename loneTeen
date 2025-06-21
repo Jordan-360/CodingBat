@@ -1,0 +1,13 @@
+WarmUp-1 : loneTeen
+
+We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+
+public boolean loneTeen(int a, int b) {
+//setting 2 boolean variables to check if a and b is within the range of 13 - 19 (inclusive)
+      boolean isATeen = (a >= 13 && a <= 19);
+      boolean isBTeen = (b >= 13 && b <= 19);
+
+      //Checking and returning if isATeen is within the given range, and isBTeen is NOT within the range OR isATeen is NOT within the range and isBTeen is within the given range. 
+      return (isATeen && !isBTeen || !isATeen && isBTeen);
+}
+
