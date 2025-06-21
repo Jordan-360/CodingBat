@@ -6,8 +6,10 @@ public boolean in1020(int a, int b) {
 //Checking if a is greater than or equal to 10 & a is also less than or equal to 20 OR b is greater than or equal to 10
 & b is also less than or equal to 20
  if((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
+        //if so, return true
             return true;
         } else {
+        //if not, return false
             return false;
         }
 }
