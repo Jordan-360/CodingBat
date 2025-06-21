@@ -1,0 +1,17 @@
+WarmUp-1 : endUp
+
+Given a string, return a new string where the last 3 chars are now in upper case. 
+If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string.
+
+public String endUp(String str) {
+//checking if the length of the string is less than 3
+   if(str.length() < 3) {
+   //if so, we take the string and return the string in all uppercase
+            return str.toUpperCase();
+        }
+
+        /* Returning the substring of str from index 0 to the index of the length of the string - 3 
+        concatenated to the substring of str from the index of the length of the string - 3 to the length of the string. All captialized */
+        
+        return str.substring(0, str.length() - 3) + str.substring(str.length() - 3).toUpperCase();
+}
