@@ -1,0 +1,26 @@
+WarmUp-1 : intMax
+
+Given three int values, a b c, return the largest.
+
+public int intMax(int a, int b, int c) {
+//setting a new int max variable to 0 
+   int max = 0;
+   
+   //checking if a is greater than b AND a is greater than c
+        if (a > b && a > c) {
+        //if so, we set max to a
+            max = a;
+            
+  //checking if b is greater than a AND b is greater than c
+        } else if (b > a && b > c) {
+        //if so, we set max to b
+            max = b;
+            
+ //otherwise, we set the max to c
+        } else {
+            max = c;
+        }
+
+        //returning the created max variable
+        return max;
+}
