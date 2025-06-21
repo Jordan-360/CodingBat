@@ -1,0 +1,17 @@
+WarmUp-1 : lastDigit
+
+Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+
+public boolean lastDigit(int a, int b) {
+//initialize 2 int variables lastDigitA and lastDigitB to 0
+  int lastDigitA = 0;
+  int lastDigitB = 0;
+
+//set lastDigitA to a mod 10
+  lastDigitA = a % 10;
+//set lastDigitB to b mod 10
+  lastDigitB = b % 10;
+
+//Returning if lastDigitA is equal to lastDigitB 
+  return lastDigitA == lastDigitB;
+}
