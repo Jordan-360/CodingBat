@@ -1,0 +1,21 @@
+WarmUp-1 : delDel
+
+Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+
+public String delDel(String str) {
+  
+  //Checking if the length of the string is less than 3
+  /* We do this because the word "del" is a length of 3. Starting at index 1, anything with fewer characters 
+ does not make it possible to see if the word "del" appears */
+  if(str.length() <= 3) {
+    //if so, just return the string
+            return str;
+        }
+  //if the string is greater than 3 we check to see if the string starts with the word "del" at index 1
+        if(str.startsWith("del", 1)) {
+          //if so, we take the first character from the string (index 0) and concatenate it to the substring from index 4 to the length of the string
+            return str.charAt(0) + str.substring(4);
+        }
+      //returning the newly modified string
+        return str;
+}
