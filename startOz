@@ -1,0 +1,29 @@
+WarmUp-1 : startOz
+
+Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+
+public String startOz(String str) {
+
+//Create a new string variable
+  String str2 = "";
+  
+  //Checking if the length of the string is less than 2
+        if (str.length() < 2) {
+        //if so, we just return the string
+            return str;
+        }
+        
+  //Checking if the character at index 0 is 'o'  
+        if (str.charAt(0) == 'o') {
+        //if so, we concatenate our created string variable (str2) to the substring of str from index 0 to index 1 (non-inclusive)
+            str2 += str.substring(0, 1);
+        }
+  //Checking if the character at index 1 is 'z' 
+        if (str.charAt(1) == 'z') {
+        //if so, we concatenate our created string variable (str2) to the substring of str from index 1 to index 2 (non-inclusive)
+            str2 += str.substring(1, 2);
+        }
+        
+        //Returning the created string variable str2
+        return str2;
+}
