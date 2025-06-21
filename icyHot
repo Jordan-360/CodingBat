@@ -1,0 +1,8 @@
+WarmUp-1 : icyHot
+
+Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+
+public boolean icyHot(int temp1, int temp2) {
+//Checking and returning if temp1 is less than 0 & temp2 is greater than 100 OR temp1 is greater than 0 & temp2 is less than 100
+  return (temp1 < 0 && temp2 > 100) || (temp1 > 0 && temp2 < 100);
+}
