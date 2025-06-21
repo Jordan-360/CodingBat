@@ -1,0 +1,29 @@
+WarmUp-1 : max1020
+
+Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
+or return 0 if neither is in that range.
+
+public int max1020(int a, int b) {
+
+//Checking if a AND b is within the range of 10 to 20 (inclusive)
+  if((a >= 10 && a <= 20) && (b >= 10 && b <= 20)) {
+  // if so, we use the Math.max method to find the maximum value of the two given parameters (a and b) and return the greater value
+            return Math.max(a, b);
+        }
+
+  //Checking if a AND b is NOT within the range of 10 to 20 (inclusive)
+        if(!(a >= 10 && a <= 20) && !(b >= 10 && b <= 20)) {
+        //if so, we return 0
+            return 0;
+        }
+  //Checking if a is within the range of 10 to 20
+       if(a >= 10 && a <= 20) {
+       //if so, return a
+           return a;
+
+       } else {
+       //if not, return b
+           return b;
+       }
+}
+
