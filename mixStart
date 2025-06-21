@@ -1,0 +1,10 @@
+WarmUp-1 : mixStart
+
+Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+
+public boolean mixStart(String str) {
+//Checking and returning if the given string starts with "ix" at index 1
+//We check with "ix" as the first character can be anything
+          return str.startsWith("ix", 1);
+
+}
