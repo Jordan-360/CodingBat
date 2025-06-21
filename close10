@@ -1,0 +1,34 @@
+WarmUp-1 : close10
+
+Given 2 int values, return whichever value is nearest to the value 10, 
+or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number.
+
+
+public int close10(int a, int b) {
+//create an int targetNumber variable and set it to 10
+//initialize 2 int variables, a2, b2 to 0
+  int targetNumber = 10;
+        int a2 = 0;
+        int b2 = 0;
+
+//Checking if the absolute value of a - targetNumber (10) is equal to the absolute value of b - targetNumber (10)
+        if((Math.abs(a - targetNumber) == Math.abs(b - targetNumber))) {
+        //if so, we return 0
+            return 0;
+        }
+
+//Set a2 to the absolute value of a - targetNumber
+//Set b2 to the absolute value of b - targetNumber
+        a2 = Math.abs(a - targetNumber);
+        b2 = Math.abs(b - targetNumber);
+
+    //Check if a2 is less than b2
+        if(a2 < b2) {
+        //if so, we return a
+            return a;
+        }
+        else {
+        //if not, we return b
+            return b;
+        }
+}
