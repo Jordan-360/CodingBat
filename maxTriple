@@ -1,0 +1,22 @@
+Array-1 : maxTriple
+
+Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. The array length will be a least 1.
+
+maxTriple([1, 2, 3]) → 3
+maxTriple([1, 5, 3]) → 5
+maxTriple([5, 2, 3]) → 5
+
+public int maxTriple(int[] nums) {
+  if(nums.length % 2 != 0) {
+            int firstIndex = nums[0];
+            int middleIndex = nums[nums.length / 2];
+            int lastIndex = nums[nums.length - 1];
+            int firstMax = Math.max(firstIndex, middleIndex);
+            return Math.max(firstMax, lastIndex);
+        }
+        int firstIndex = nums[0];
+        int middleIndex = nums[(nums.length / 2) - 1];
+        int lastIndex = nums[nums.length - 1];
+        int firstMax = Math.max(firstIndex, middleIndex);
+        return Math.max(lastIndex, firstMax);
+}
