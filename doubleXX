@@ -1,0 +1,23 @@
+WarmUp-2 : doubleX
+
+Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+
+doubleX("axxbb") → true
+doubleX("axaxax") → false
+doubleX("xxxxx") → true
+
+public boolean doubleX(String str) {
+    int xCounter = 0;
+        if(str.length() <= 1) {
+            return false;
+        }
+        for(int i = 0; i < str.length() - 1; i++) {
+            if(str.charAt(i) == 'x') {
+                xCounter++;
+            }
+            if(xCounter == 1) {
+                return str.charAt(i) == 'x' && str.charAt(i + 1) == 'x';
+            }
+        }
+        return false;
+}
