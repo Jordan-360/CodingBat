@@ -1,0 +1,24 @@
+String-2 : mixString
+
+Given two strings, a and b, create a bigger string made of the first char of a, the first char of b,
+the second char of a, the second char of b, and so on. Any leftover chars go at the end of the result.
+
+
+mixString("abc", "xyz") → "axbycz"
+mixString("Hi", "There") → "HTihere"
+mixString("xxxx", "There") → "xTxhxexre"
+
+public String mixString(String a, String b) {
+   int min = Math.min(a.length(), b.length());
+        StringBuilder str2 = new StringBuilder();
+        for (int i = 0; i < min; i++) {
+            str2.append(a.charAt(i)).append(b.charAt(i));
+        }
+        if(b.length() > a.length()) {
+            return str2 + b.substring(a.length());
+        }
+        if(a.length() > b.length()) {
+            return str2 + a.substring(b.length());
+        }
+        return str2.toString();
+}
