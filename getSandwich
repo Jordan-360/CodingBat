@@ -1,0 +1,33 @@
+String-2 : getSandwich
+
+
+A sandwich is two pieces of bread with something in between. Return the string that is between the first and 
+last appearance of "bread" in the given string, or return the empty string "" if there are not two pieces of bread.
+
+
+getSandwich("breadjambread") → "jam"
+getSandwich("xxbreadjambreadyy") → "jam"
+getSandwich("xxbreadyy") → ""
+
+public String getSandwich(String str) {
+ String target = "bread";
+        int firstIndex = 0;
+        int lastIndex = 0;
+        for (int i = 0; i < str.length() - 5; i++) {
+            if (str.substring(i, i + 5).equals(target)) {
+                firstIndex = i;
+                break;
+            }
+        }
+        for (int i = str.length() - 5; i >= 0; i--) {
+            if (str.substring(i, i + 5).equals(target)) {
+                lastIndex = i;
+                break;
+            }
+        }
+        if (firstIndex != lastIndex) {
+            return str.substring(firstIndex + 5, lastIndex);
+
+        }
+        return "";
+}
