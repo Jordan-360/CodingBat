@@ -1,0 +1,24 @@
+String-2 : plusOut
+
+Given a string and a non-empty word string, return a version of the original 
+String where all chars have been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
+
+
+plusOut("12xy34", "xy") → "++xy++"
+plusOut("12xy34", "1") → "1+++++"
+plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+
+public String plusOut(String str, String word) {
+   String str2 = "";
+        int index = 0;
+        while (index < str.length()) {
+            if (index <= str.length() - word.length() && str.substring(index, index + word.length()).equals(word)) {
+                str2 += word;
+                index += word.length();
+            } else {
+                str2 += "+";
+                index++;
+            }
+        }
+        return str2;
+}
