@@ -1,0 +1,30 @@
+Array-2 : twoTwo
+
+Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+
+
+twoTwo([4, 2, 2, 3]) → true
+twoTwo([2, 2, 4]) → true
+twoTwo([2, 2, 4, 2]) → false
+
+public boolean twoTwo(int[] nums) {
+   int targetNumber = 2;
+        int lastIndexOf2 = 0;
+        boolean tracker = true;
+        if(nums.length == 0) {
+            return true;
+        } else if(nums.length < 2) {
+            if (nums[0] == targetNumber) {
+                return false;
+            }
+        }
+       for(int i = 0; i < nums.length; i++) {
+           if (nums[i] == targetNumber) {
+               lastIndexOf2 = i;
+           }
+       }
+        for(int i = 0; i < lastIndexOf2; i++) {
+            tracker = nums[i] == targetNumber && nums[i + 1] == targetNumber;
+        }
+       return tracker;
+}
