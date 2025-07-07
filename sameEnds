@@ -1,0 +1,34 @@
+Array-2 : sameEnds
+
+Return true if the group of N numbers at the start and end of the array are the same. For example, with {5, 6, 45, 99, 13, 5, 6}, 
+the ends are the same for n=0 and n=2, and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusive.
+
+
+sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
+sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
+sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
+
+public boolean sameEnds(int[] nums, int len) {
+   int[] startOfArray = new int[len];
+        int[] endOfArray = new int[len];
+        int indexOfStartOfArray = 0;
+        int indexOfEndOfArray = 0;
+
+        for(int i = 0; i < len; i++) {
+            startOfArray[indexOfStartOfArray] = nums[i];
+            indexOfStartOfArray++;
+        }
+        for(int i = nums.length - len; i < nums.length; i++) {
+            endOfArray[indexOfEndOfArray] = nums[i];
+            indexOfEndOfArray++;
+        }
+        for(int i = 0; i < len; i++) {
+            if (startOfArray[i] != endOfArray[i]) {
+                return false;
+            }
+        }
+        return true;
+      
+  
+}
+ 
