@@ -1,1 +1,1 @@
-# Solutions and Comments for CodingBat Java Practice Problems
+# Solutions for CodingBat Java Practice Problems
