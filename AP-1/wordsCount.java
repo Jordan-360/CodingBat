@@ -1,4 +1,4 @@
-Array-2 : wordsCount
+AP-1 : wordsCount
 
 Given an array of strings, return the count of the number of strings with the given length.
 
