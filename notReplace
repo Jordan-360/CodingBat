@@ -1,0 +1,26 @@
+CodingBat - String-3 - notReplace
+
+Given a string, return a string where every appearance of the lowercase word "is" has been replaced with "is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+
+notReplace("is test") → "is not test"
+notReplace("is-is") → "is not-is not"
+notReplace("This is right") → "This is not right"
+
+public String notReplace(String str) {
+       List<String> words = new ArrayList<>(Arrays.asList(
+    str.split("(?<=\\P{Alpha})(?=\\p{Alpha})|(?<=\\p{Alpha})(?=\\P{Alpha})")
+));
+        for(int i = 0; i < words.size(); i++) {
+            if (words.get(i).equals("is")) {
+                words.add(i + 1, "not");
+            }
+        }
+        StringBuilder replacement = new StringBuilder();
+        for(String word : words) {
+            if(word.equals("not")) {
+                replacement.append(" ");
+            }
+            replacement.append(word);
+        }
+        return replacement.toString();
+  }
